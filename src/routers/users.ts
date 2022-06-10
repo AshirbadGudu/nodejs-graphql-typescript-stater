@@ -1,33 +1,13 @@
 import { Router } from "express";
-
+import { usersController } from "../controllers";
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.status(200).json({
-    data: [],
-    message: "Users fetched successfully",
-  });
-});
+router.get("/", usersController.getAllUsers);
 
-router.post("/create", (req, res) => {
-  res.status(200).json({
-    data: {},
-    message: "User created successfully",
-  });
-});
+router.post("/create", usersController.createUser);
 
-router.put("/update", (req, res) => {
-  res.status(200).json({
-    data: {},
-    message: "User updated successfully",
-  });
-});
+router.put("/update", usersController.updateUser);
 
-router.delete("/delete/:_id", (req, res) => {
-  res.status(200).json({
-    data: {},
-    message: "User deleted successfully",
-  });
-});
+router.delete("/delete/:_id", usersController.deleteUser);
 
 export default router;
