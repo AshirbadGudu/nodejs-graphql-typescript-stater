@@ -69,3 +69,9 @@ npm i express
 ```sh
 npm i @types/express --save-dev
 ```
+
+### Install `dotenv`
+
+```sh
+npm i dotenv
+```

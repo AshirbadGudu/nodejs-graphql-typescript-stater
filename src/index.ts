@@ -1,9 +1,13 @@
-// Create http server and listen on port 3000
+import { config } from "dotenv";
 import express from "express";
+config();
+
+const PORT = process.env.PORT || 3023;
+
 const app = express();
 
 app.get("/", function (req, res) {
   res.send("Hello World");
 });
 
-app.listen(3000);
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
