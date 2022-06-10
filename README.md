@@ -57,3 +57,15 @@ npm install --save-dev ts-node
   }
 }
 ```
+
+### Install `express`
+
+```sh
+npm i express
+```
+
+### Install types for `express`
+
+```sh
+npm i @types/express --save-dev
+```
