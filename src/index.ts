@@ -1,5 +1,9 @@
-const helloTS = (prop: number) => {
-  console.log(prop);
-  console.log("Hello, TypeScript!");
-};
-helloTS(1);
+// Create http server and listen on port 3000
+import http from "http";
+
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Hello World\n");
+  })
+  .listen(3000);
