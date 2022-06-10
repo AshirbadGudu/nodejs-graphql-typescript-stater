@@ -4,12 +4,14 @@
   "description": "A Stater Node JS Express Stater With TypeScript",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "start": "node server",
-    "build": "tsc"
+    "dev": "nodemon --exec ts-node src/index.ts"
   },
   "author": "Ashirbad Panigrahi",
   "license": "ISC",
   "devDependencies": {
+    "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   }
 }
