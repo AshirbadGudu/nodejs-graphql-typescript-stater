@@ -75,3 +75,9 @@ npm i @types/express --save-dev
 ```sh
 npm i dotenv
 ```
+
+### Create a `test` directory for writing API tests
+
+```sh
+mkdir test
+```

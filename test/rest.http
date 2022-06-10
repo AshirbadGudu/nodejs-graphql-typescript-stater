@@ -1,0 +1,24 @@
+### Get All Users
+GET http://localhost:4022/users/ HTTP/1.1
+
+### Create User
+POST http://localhost:4022/users/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "something@domain.com",
+    "displayName" : "Some Thing",
+    "password" : "something_secret"
+}
+
+### Update User
+PUT http://localhost:4022/users/update HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id" : "uid",
+    "displayName" : "Some New Thing",
+}
+
+### Delete User
+DELETE http://localhost:4022/users/delete/_uid HTTP/1.1
