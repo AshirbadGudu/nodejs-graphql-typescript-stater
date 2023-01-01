@@ -3,6 +3,7 @@ import express from "express";
 import { users } from "./routers";
 import { graphqlHTTP } from "express-graphql";
 import { schema } from "./schemas";
+import { usersResolvers } from "./resolvers";
 
 config();
 
@@ -30,9 +31,7 @@ app.use(
   "/graphql",
   graphqlHTTP({
     schema,
-    rootValue: {
-      users: () => [],
-    },
+    rootValue: { ...usersResolvers },
     graphiql: true,
   })
 );

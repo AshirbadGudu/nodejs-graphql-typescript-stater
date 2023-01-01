@@ -11,5 +11,6 @@ export const schema = buildSchema(`
     ${UserSchema}
     type Query {
         users: [User]
+        user(_id: String!): User
     }
 `);
