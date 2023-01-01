@@ -1,11 +1,7 @@
 import { buildSchema } from "graphql";
+import { readGraphql } from "../utils";
 
-import { readFileSync } from "fs";
-
-const UserSchema = readFileSync("./graphql/user.graphql", {
-  encoding: "utf8",
-  flag: "r",
-});
+const UserSchema = readGraphql({ schema: "user" });
 
 export const schema = buildSchema(`
     ${UserSchema}
