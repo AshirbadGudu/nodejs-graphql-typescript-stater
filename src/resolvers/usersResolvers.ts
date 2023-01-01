@@ -16,4 +16,9 @@ export default {
   user: ({ _id }: any) => {
     return users.find((user) => user._id === _id);
   },
+  createUser: ({ user }: any, args: any) => {
+    const newUser = { ...user, _id: `${Date.now()}` };
+    users.push(newUser);
+    return newUser;
+  },
 };

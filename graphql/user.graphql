@@ -8,3 +8,10 @@ type User {
   createdAt: String
   updatedAt: String
 }
+input UserInput {
+  displayName: String
+  email: String
+  password: String
+  phoneNumber: String
+  photoURL: String
+}
