@@ -1,8 +1,8 @@
 import { config } from "dotenv";
 import express from "express";
 import { users } from "./routers";
-import { GraphQLSchema, GraphQLObjectType, GraphQLString } from "graphql";
 import { graphqlHTTP } from "express-graphql";
+import { schema } from "./schemas";
 
 config();
 
@@ -23,25 +23,16 @@ app.get("/", (_, res) => res.send("Node JS Express Typescript Server Running"));
 app.use("/users/", users);
 
 /**
- * Create a graphql
+ * Create a graphql endpoint
  * */
-
-const schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: "helloworld",
-    fields: {
-      message: {
-        type: GraphQLString,
-        resolve: () => "Hello World!",
-      },
-    },
-  }),
-});
 
 app.use(
   "/graphql",
   graphqlHTTP({
-    schema: schema,
+    schema,
+    rootValue: {
+      users: () => [],
+    },
     graphiql: true,
   })
 );
