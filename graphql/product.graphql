@@ -8,6 +8,7 @@ type Product {
   status: ProductStatus
   isInWishlist: Boolean
   isInCart: Boolean
+  category: Category!
   createdAt: DateTime!
   updatedAt: DateTime!
 }

@@ -1,0 +1,15 @@
+type Category {
+  id: ID!
+  name: String!
+  url: String
+  description: String
+  products: [Product!]!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+input CategoryInput {
+  name: String!
+  url: String
+  description: String
+}
