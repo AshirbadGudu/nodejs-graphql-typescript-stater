@@ -4,11 +4,13 @@ type Product {
   description: String!
   price: Float!
   off: Float
+  rating: Float!
   images: [String!]!
   status: ProductStatus
   isInWishlist: Boolean
   isInCart: Boolean
   category: Category!
+  reviews: [Review!]!
   createdAt: DateTime!
   updatedAt: DateTime!
 }

@@ -1,0 +1,13 @@
+type Review {
+  id: ID!
+  user: User!
+  rating: Int!
+  comment: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+input ReviewInput {
+  productId: ID!
+  rating: Int!
+  comment: String!
+}
