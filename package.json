@@ -1,7 +1,7 @@
 {
-  "name": "node-express-ts-stater",
+  "name": "node-graphql-ts-stater",
   "version": "1.0.0",
-  "description": "A Stater Node JS Express Stater With TypeScript",
+  "description": "A Stater Node JS GraphQL Stater With TypeScript",
   "main": "index.js",
   "author": "Ashirbad Panigrahi",
   "license": "ISC",

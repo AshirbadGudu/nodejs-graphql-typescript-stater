@@ -1,4 +1,4 @@
-# Node JS Express TypeScript Stater
+# Node JS GraphQL TypeScript Stater
 
 ## Steps to setup
 
@@ -70,6 +70,18 @@ npm i express
 npm i @types/express --save-dev
 ```
 
+### Install `express-graphql` & `graphql`
+
+```sh
+npm i express-graphql graphql
+```
+
+### Install types for `express-graphql` & `graphql`
+
+```sh
+npm i @types/express-graphql @types/graphql --save-dev
+```
+
 ### Install `dotenv`
 
 ```sh
@@ -79,8 +91,9 @@ npm i dotenv
 ### Create following directories
 
 ```sh
-mkdir test # for holding API test files
+mkdir ./graphql # for holding graphql schema
 mkdir ./src/types # for holding types for project
-mkdir ./src/routes # for holding routes of API endpoints
-mkdir ./src/controllers # for holding controllers of API endpoints
+mkdir ./src/utils # for holding utility functions for graphql
+mkdir ./src/schemas # for holding buildSchema for graphql
+mkdir ./src/resolvers # for holding resolvers for graphql
 ```
