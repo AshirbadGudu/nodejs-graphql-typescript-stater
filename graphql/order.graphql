@@ -1,0 +1,42 @@
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentMethod {
+  ONLINE
+  COD
+}
+
+type OrderItem {
+  id: ID!
+  order: Order!
+  product: Product!
+  quantity: Int!
+  unitPrice: Float!
+  totalPrice: Float!
+}
+
+type Order {
+  id: ID!
+  user: User!
+  items: [OrderItem!]!
+  totalPrice: Float!
+  status: OrderStatus!
+  appliedCoupon: Coupon
+  paymentMethod: PaymentMethod
+  shippingAddress: ShippingAddress
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+input OrderInput {
+  userId: ID!
+  items: [OrderItemInput!]!
+  paymentMethod: String
+  shippingAddressId: ID
+  couponCode: String
+}
