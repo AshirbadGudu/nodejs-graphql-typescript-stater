@@ -1,0 +1,26 @@
+type Product {
+  id: ID!
+  name: String!
+  description: String!
+  price: Float!
+  off: Float
+  images: [String!]!
+  status: ProductStatus
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+input ProductInput {
+  name: String!
+  description: String!
+  price: Float!
+  images: [String!]
+  off: Float
+  status: ProductStatus
+}
+
+enum ProductStatus {
+  NORMAL
+  FEATURED
+  HIDDEN
+}
