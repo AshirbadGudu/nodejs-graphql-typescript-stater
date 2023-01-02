@@ -1,13 +1,23 @@
+enum AccountStatus {
+  ACTIVE
+  BLOCKED
+}
+
 type User {
-  _id: ID!
+  id: ID!
+  email: String!
   displayName: String
-  email: String
-  password: String
   phoneNumber: String
   photoURL: String
-  createdAt: String
-  updatedAt: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  status: AccountStatus!
+  orders: [Order!]!
+  cart: [CartItem!]!
+  wishlist: [Product!]!
+  addresses: [ShippingAddress!]!
 }
+
 input UserInput {
   displayName: String
   email: String
