@@ -1,0 +1,15 @@
+type Support {
+  id: ID!
+  name: String!
+  email: String!
+  subject: String!
+  message: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+input SupportInput {
+  name: String!
+  email: String!
+  subject: String!
+  message: String!
+}
