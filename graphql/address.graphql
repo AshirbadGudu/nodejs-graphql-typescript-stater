@@ -1,0 +1,23 @@
+type ShippingAddress {
+  id: ID!
+  user: User!
+  name: String!
+  address1: String!
+  address2: String
+  city: String!
+  state: String!
+  zip: String!
+  country: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+input ShippingAddressInput {
+  name: String!
+  address1: String!
+  address2: String
+  city: String!
+  state: String!
+  zip: String!
+  country: String!
+}
