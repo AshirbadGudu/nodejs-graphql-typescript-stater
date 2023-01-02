@@ -1,0 +1,18 @@
+type Cart {
+  id: ID!
+  user: User!
+  items: [CartItem!]!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type CartItem {
+  product: Product!
+  quantity: Int!
+  price: Float!
+}
+
+input CartItemInput {
+  productId: ID!
+  quantity: Int!
+}
