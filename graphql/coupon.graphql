@@ -1,0 +1,10 @@
+type Coupon {
+  id: ID!
+  code: String!
+  discountAmount: Float!
+}
+
+input CouponInput {
+  code: String!
+  discountAmount: Float!
+}
