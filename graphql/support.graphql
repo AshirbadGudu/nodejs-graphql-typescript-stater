@@ -4,8 +4,8 @@ type Support {
   email: String!
   subject: String!
   message: String!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  createdAt: String!
+  updatedAt: String!
 }
 input SupportInput {
   name: String!

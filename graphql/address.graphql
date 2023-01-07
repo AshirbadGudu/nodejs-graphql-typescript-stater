@@ -8,8 +8,8 @@ type ShippingAddress {
   state: String!
   zip: String!
   country: String!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  createdAt: String!
+  updatedAt: String!
 }
 
 input ShippingAddressInput {

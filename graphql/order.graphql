@@ -13,7 +13,6 @@ enum PaymentMethod {
 
 type OrderItem {
   id: ID!
-  order: Order!
   product: Product!
   quantity: Int!
   unitPrice: Float!
@@ -29,8 +28,15 @@ type Order {
   appliedCoupon: Coupon
   paymentMethod: PaymentMethod
   shippingAddress: ShippingAddress
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  createdAt: String!
+  updatedAt: String!
+}
+
+input OrderItemInput {
+  product: Product!
+  quantity: Int!
+  unitPrice: Float!
+  totalPrice: Float!
 }
 
 input OrderInput {

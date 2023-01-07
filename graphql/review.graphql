@@ -3,8 +3,8 @@ type Review {
   user: User!
   rating: Int!
   comment: String!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  createdAt: String!
+  updatedAt: String!
 }
 input ReviewInput {
   productId: ID!

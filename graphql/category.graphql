@@ -4,8 +4,8 @@ type Category {
   url: String
   description: String
   products: [Product!]!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  createdAt: String!
+  updatedAt: String!
 }
 
 input CategoryInput {

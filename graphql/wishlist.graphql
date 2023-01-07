@@ -2,13 +2,13 @@ type Wishlist {
   id: ID!
   user: User!
   items: [WishlistItem!]!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  createdAt: String!
+  updatedAt: String!
 }
 
 type WishlistItem {
   product: Product!
-  addedAt: DateTime!
+  addedAt: String!
 }
 
 input WishlistItemInput {

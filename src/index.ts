@@ -15,7 +15,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", (_, res) => res.send("Node JS Express Typescript Server Running"));
+app.get("/", (_, res) => res.send("Node JS GraphQL Typescript Server Running"));
 
 /**
  * Create a REST API for users route
